@@ -28,10 +28,7 @@ def fetch_indtoday():
             img_tag = description_soup.find('img')
             image_url = img_tag.get('src') if img_tag else None
             
-            # Extract text from the description (excluding HTML tags)
-            text1 = description_soup.get_text().strip()
-            
-            news.append((title, text1, image_url))
+            news.append((title, image_url))
         
         
         return news
